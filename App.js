@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import DrawerNavigator from './navigation/DrawerNavigator'
+import HomeScreen from './screen/HomeScreen'
 
 
 
@@ -23,9 +23,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  text: {
-    fontSize: 30,
-  }
   
 });
 
