@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './screen/HomeScreen'
+import DrawerNavigator from './navigation/DrawerNavigator'
 
 
 
@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Home</Text>
-        <HomeScreen />
+        <DrawerNavigator />
       </View>
     );
   }
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   
 });
 
