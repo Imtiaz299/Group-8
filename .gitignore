@@ -5,3 +5,10 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+yarn.lock
+
+app.json
+
+.watchmanconfig
+
+assets/*
