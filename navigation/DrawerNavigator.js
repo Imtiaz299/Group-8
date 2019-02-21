@@ -19,6 +19,14 @@ const DrawerNavigator =  createDrawerNavigator(
 		Home: {
 			screen: HomeScreen
 		},
+
+		About: {
+			screen: AboutScreen
+		},
+
+		Setting: {
+			screen: SettingScreen
+		}
 		
 	},
 	DrawerConfig
