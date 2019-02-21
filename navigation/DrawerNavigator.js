@@ -3,31 +3,31 @@ import { Platform, Dimensions } from 'react-native';
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
 import HomeScreen from '../screens/HomeScreen';
+import AboutScreen from '../screens/AboutScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
-
+import MenuDrawer from '../components/MenuDrawer';
 
 const WIDTH = Dimensions.get('window').width;
 
-const DrawerConfig={
+const DrawerConfig = {
 	drawerWidth: WIDTH*0.83,
+	contentComponent: ({ navigation }) => {
+		return(<MenuDrawer navigation={navigation} />)
+	}
 }
-
-
 
 const DrawerNavigator =  createDrawerNavigator(
 	{
 		Home: {
 			screen: HomeScreen
 		},
-
 		About: {
 			screen: AboutScreen
 		},
-
-		Setting: {
-			screen: SettingScreen
+		Settings: {
+			screen: SettingsScreen
 		}
-		
 	},
 	DrawerConfig
 );
