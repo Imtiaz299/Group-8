@@ -5,6 +5,7 @@ import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from '../screens/HomeScreen';
 import AboutScreen from '../screens/AboutScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 import MenuDrawer from '../components/MenuDrawer';
 
@@ -27,7 +28,11 @@ const DrawerNavigator =  createDrawerNavigator(
 		},
 		Settings: {
 			screen: SettingsScreen
+		},
+		Login: {
+			screen: LoginScreen
 		}
+
 	},
 	DrawerConfig
 );
