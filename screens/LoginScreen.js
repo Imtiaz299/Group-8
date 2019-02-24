@@ -1,15 +1,50 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform, TextInput, TouchableOpacity
+ } from 'react-native';
 
 import MenuButton from '../components/MenuButton'
 
 export default class LoginScreen extends React.Component {
+  static navigationOption ={
+    title: 'Links',
+  };
+
+  state= {
+    email: "Default email",
+    password: "Default password"
+  };
+
   render() {
     return (
+      
       <View style={styles.container}>
-        <MenuButton navigation={this.props.navigation} />
-        <Text style={styles.text}>hello world</Text>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>Create an account below</Text>
+            <TextInput
+              style={styles.textInput}
+              onChangeText={(text)=>this.setState({email})}
+              value={this.state.email}
+            />
+
+            <TextInput
+              style={styles.textInput}
+              onChangeText={(text)=>this.setState({password})}
+              value={this.state.password}
+            />
+
+            <TouchableOpacity
+              style={{marginTop: '5%'}}
+              onPress={() => {}}>
+              <View>
+                 <Text>Submit</Text>
+              </View>
+            </TouchableOpacity>
+            <MenuButton navigation={this.props.navigation} />
+          </View>
       </View>
+         
+     
+      
     );
   }
 }
@@ -20,8 +55,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    
+    
+  },
+  textContainer: {
+    flex: 1,
+    alignItems: 'center',
+    marginHorizontal: 50,
+    paddingTop: '50%',
+  },
+  textInput: {
+    fontSize: 17,
+    lineHeight: 24,
+    width: '75%',
   },
   text: {
-    fontSize: 30,
-  }
+    fontSize: 17,
+    color: 'rgba(96,100,109,1)',
+    lineHeight: 24,
+    width: '75%',
+    textAlign: 'center',
+    marginBottom: '10%',
+  },
+  
 });
