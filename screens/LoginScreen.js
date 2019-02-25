@@ -1,6 +1,6 @@
 import React from 'react';
 //import { ExpoLinksView } from '@expo/samples';
-import firebaseAPI from '../modules/firebaseAPI'
+import firebaseAPI from '../modules/firebaseAPI';
 import { StyleSheet, Text, View, Platform, TextInput, TouchableOpacity
  } from 'react-native';
 
@@ -39,8 +39,9 @@ export default class LoginScreen extends React.Component {
             />
 
             <TouchableOpacity
-              style={{marginTop: '5%'}}
-              onPress={() => {}}>
+              style={{marginTop: '15%'}}
+              onPress={() => this.submit()}
+            >
               <View>
                  <Text>Submit</Text>
               </View>
