@@ -1,7 +1,0 @@
-Idea : Bachelor Accomodation(home solution)
-
-context : AS we all lnow in Dhaka city to find a decent place to live for a single male or female is not very easy. The experience that a person has to go through is not always pleasant. In that case if an app to fix a place to l ive will be a good solution to offer to the bachelors who are looking for a house to rent.
-
-Tools: JavaSript, React Native, CSS3, HTML5 and MySQL
-
-features : An interactive interface where the request for a rent will be placed. Also the the pictures or videos can be uploaded of the place to be rented. Members will be notified, Also there will be an anonymous rating for the site.
