@@ -1,5 +1,8 @@
-node_modules/**/*
-.expo/*
+Project-Code/node_modules/**/*
+Project-Code/app.json
+Project-Code/.expo*
+
+
 npm-debug.*
 *.jks
 *.p12
