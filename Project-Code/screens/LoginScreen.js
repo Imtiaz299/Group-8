@@ -1,6 +1,6 @@
 import React from 'react';
 //import { ExpoLinksView } from '@expo/samples';
-import firebaseAPI from '../modules/firebaseAPI'
+import * as FirebaseAPI from '../modules/firebaseAPI'
 import { StyleSheet, Text, View, Platform, TextInput, TouchableOpacity
  } from 'react-native';
 
@@ -17,7 +17,7 @@ export default class LoginScreen extends React.Component {
   };
 
   submit(){
-       firebaseAPI.createUser(this.state.email, this.state.password)
+       FirebaseAPI.createUser(this.state.email, this.state.password)
   }
 
   render() {
