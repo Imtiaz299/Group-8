@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { AppLoading, Asset, Font, Icon } from 'expo';
 import firebase from 'firebase';
 import DrawerNavigator from './navigation/DrawerNavigator'
 
-var config = {
+var firebaseConfig = {
   apiKey: "AIzaSyAZNBDNtxdGC9dFnpNGlqKtAIAb2wvt7hY",
   authDomain: "bacheloraccommodation-815cd.firebaseapp.com",
   databaseURL: "https://bacheloraccommodation-815cd.firebaseio.com",
@@ -12,7 +13,7 @@ var config = {
   messagingSenderId: "290763445002"
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 export default class App extends React.Component {
   render() {
