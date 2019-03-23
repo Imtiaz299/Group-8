@@ -1,15 +1,17 @@
 import React from 'react';
 import { Platform, Dimensions } from 'react-native';
-import { createDrawerNavigator, createAppContainer } from 'react-navigation';
+import { createDrawerNavigator, createAppContainer, createStackNavigator  } from 'react-navigation';
 
 import HomeScreen from '../screens/HomeScreen';
 import AboutScreen from '../screens/AboutScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import LoginScreen from '../screens/LoginScreen';
 
+
 import MenuDrawer from '../components/MenuDrawer';
 
 const WIDTH = Dimensions.get('window').width;
+const AuthStack= createStackNavigator({ Login: LoginScreen });
 
 const DrawerConfig = {
 	drawerWidth: WIDTH*0.83,
