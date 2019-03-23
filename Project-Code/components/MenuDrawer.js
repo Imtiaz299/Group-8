@@ -44,7 +44,7 @@ export default class MenuDrawer extends React.Component {
 					</View>
 				</ScrollView>
 				<View style={styles.footer}>
-					<Text style={styles.description}>Menu Tutorial</Text>
+					<Text style={styles.description}>BachelorAccommodation</Text>
 					<Text style={styles.version}>v1.0</Text>
 				</View>
 			</View>
