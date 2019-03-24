@@ -9,8 +9,8 @@ import {
  } from 'react-native';
 import firebase from 'firebase'
 import * as FirebaseAPI from '../modules/firebaseAPI';
-
 import MenuButton from '../components/MenuButton'
+
 
 export default class LoginScreen extends React.Component {
   constructor(props) {
@@ -52,13 +52,15 @@ export default class LoginScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>Create an account below</Text>
-          <TextInput 
-            style={styles.textInput}
-            onChangeText={(text) => this.setState({email: text})}
-            value={this.state.email}
-          />
+        <MenuButton navigation={this.props.navigation} />
+
+          <View style={styles.textContainer}>
+           <Text style={styles.text}>Create an account below</Text>
+            <TextInput 
+              style={styles.textInput}
+              onChangeText={(text) => this.setState({email: text})}
+              value={this.state.email}
+            />
           <TextInput 
             style={styles.textInput}
             onChangeText={(text) => this.setState({password: text})}
