@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import firebase from 'firebase'
+import MenuButton from '../components/MenuButton'
 
 export default class AuthLoadingScreen extends React.Component {
   constructor(props) {
@@ -14,10 +15,10 @@ export default class AuthLoadingScreen extends React.Component {
     this._bootstrapAsync();
   }
 
-  
+
   _bootstrapAsync = async () => {
-    const userToken= await AsyncStorage.getItem('userToken');
-    this.props.navigation.navigate(userToken ? 'App' : 'Auth');
+    console.log("Authed User: ", firebase.auth().currentUser)
+    this.props.navigation.navigate(false ? 'App' : 'Auth');
   };
 
  
